@@ -9,6 +9,13 @@ app.use("/user", (req, res) => {
   });
 });
 
+app.use("user/:id", (req, res) => {
+  const id = req.params;
+  res.json({
+    msg: "Listo",
+  });
+});
+
 app.listener(PORT, () => {
   console.log(`Aplicacion corriendo en http://localhost:${PORT}`);
 });
